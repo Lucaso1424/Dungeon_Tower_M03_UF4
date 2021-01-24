@@ -12,12 +12,13 @@ package Personatges;
 
 public class Jugador {
     private int vida = 10;
-    private final static int vida_maxima = 10;
+    private int vida_maxima = 10;
     private int atac = 1;
     private int defensa = 1;
     
-    public Jugador (int vida, int atac, int defensa) {
+    public Jugador (int vida, int vida_maxima, int atac, int defensa) {
         this.vida = vida;
+        this.vida_maxima = vida_maxima;
         this.atac = atac;
         this.defensa = defensa;
     }

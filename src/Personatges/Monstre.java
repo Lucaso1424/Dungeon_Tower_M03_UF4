@@ -13,4 +13,11 @@ public class Monstre {
     private int vida;
     private int atac;
     private int defensa;
+    
+    public Monstre (int vida, int atac, int defensa) {
+        this.vida = vida;
+        this.atac = atac;
+        this.defensa = defensa;
+    }
+    
 }

@@ -17,10 +17,6 @@ public class Mapa {
     
     @Override
     public String toString() {
-        return "+-----\n|      |\n|   J   |\n+------+";
-    }
-    
-    public static void main () {
-        System.out.println("+-----\n|      |\n|   J   |\n+------+");
+        return "+-----\n|    |\n|   J   |\n+------+";
     }
 }
