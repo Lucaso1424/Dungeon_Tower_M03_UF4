@@ -4,12 +4,18 @@
  * and open the template in the editor.
  */
 package Habitacions;
+import java.util.Scanner;
 
 /**
  *
  * @author lucas
  */
-public class Mapa {
+public class Mapa /*(Habitacio[] habitacions)*/ {
+    Scanner in = new Scanner (System.in);
+    
+    public void getHabitacioActual() {
+        
+    }
     
     public boolean mou() {
         return false;
