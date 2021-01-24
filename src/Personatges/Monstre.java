@@ -10,12 +10,10 @@ package Personatges;
  * @author lucas
  */
 public class Monstre extends Personatge {
+
     private String nom;
     
-    public Monstre (int vida, int atac, int defensa, String nom) {
-        this.vida = vida;
-        this.atac = atac;
-        this.defensa = defensa;
-        this.nom = nom;           
+    public Monstre(int vida, int atac, int defensa, boolean esticViu) {
+        super(vida, atac, defensa, esticViu);
     }
 }

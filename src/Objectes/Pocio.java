@@ -9,9 +9,14 @@ package Objectes;
  *
  * @author lucas
  */
-abstract class Pocio {
+public abstract class Pocio {
     private int intensitat;
     private String nom;
+    
+    protected Pocio(String nom, int intensitat) {
+        this.nom = nom;
+        this.intensitat = intensitat;
+    }
     
     
 }

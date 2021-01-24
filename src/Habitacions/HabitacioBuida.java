@@ -10,5 +10,5 @@ package Habitacions;
  * @author lucas
  */
 public class HabitacioBuida {
-    
+
 }

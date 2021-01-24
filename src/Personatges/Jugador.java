@@ -9,23 +9,12 @@ package Personatges;
  *
  * @author lucas
  */
-
 public class Jugador extends Personatge {
+
     private int vida_maxima = 10;
-    
-    public Jugador (int vida_maxima, int vida, int atact, int defensa, boolean esticViu) {
-        this.vida_maxima = vida_maxima;
-        this.vida = vida;
-        this.atac = atac;
-        this.defensa = defensa;
-        this.esticViu = esticViu;
-    }
 
-    public void setVida_maxima(int vida_maxima) {
+    public Jugador(int vida, int atac, int defensa, boolean esticViu) {
+        super(10, 1, 1, true);
         this.vida_maxima = vida_maxima;
-    }
-
-    public int getVida_maxima() {
-        return vida_maxima;
     }
 }

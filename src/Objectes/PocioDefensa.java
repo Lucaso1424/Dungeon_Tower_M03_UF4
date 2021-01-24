@@ -11,9 +11,15 @@ import Personatges.Jugador;
  *
  * @author lucas
  */
-public class PocioDefensa {
+public class PocioDefensa extends Pocio {
 
+    public PocioDefensa(String nom, int intensitat) {
+        super(nom, intensitat);
+    }
+
+    // @Override
     public String efecte(Jugador jugador) {
-        return "";
+        jugador.setDefensa(jugador.getDefensa() + 1);
+        return "La defensa del jugador s'ha sumat en 1";
     }
 }
