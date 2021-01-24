@@ -9,9 +9,16 @@ package Personatges;
  *
  * @author lucas
  */
+
 public class Jugador {
-    private int vida;
+    private int vida = 10;
     private final static int vida_maxima = 10;
-    private int atac;
-    private int defensa;
+    private int atac = 1;
+    private int defensa = 1;
+    
+    public Jugador (int vida, int atac, int defensa) {
+        this.vida = vida;
+        this.atac = atac;
+        this.defensa = defensa;
+    }
 }

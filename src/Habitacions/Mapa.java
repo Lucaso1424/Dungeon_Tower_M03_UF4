@@ -11,11 +11,16 @@ package Habitacions;
  */
 public class Mapa {
     
-    public static void mou() {
-        
+    public boolean mou() {
+        return false;
     }
     
-    public static void string() {
-        
+    @Override
+    public String toString() {
+        return "+-----\n|      |\n|   J   |\n+------+";
+    }
+    
+    public static void main () {
+        System.out.println("+-----\n|      |\n|   J   |\n+------+");
     }
 }
