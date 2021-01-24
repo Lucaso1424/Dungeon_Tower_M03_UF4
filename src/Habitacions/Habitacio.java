@@ -5,10 +5,15 @@
  */
 package Habitacions;
 
+import Personatges.Jugador;
+
 /**
  *
  * @author lucas
  */
-public class Habitacio {
-    
+abstract class Habitacio {
+    public abstract String activar(Jugador jugador);
+    public abstract String entrar();
+    public abstract String sortir();
+    public abstract String toString(int linia);
 }

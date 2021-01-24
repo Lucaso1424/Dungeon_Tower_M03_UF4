@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Habitacions;
+package Objectes;
+
+import Personatges.Jugador;
 
 /**
  *
  * @author lucas
  */
-public class GeneradorMapes {
-    
-    public void crearMapa () {
-        
+public class PocioAtac {
+        public String efecte(Jugador jugador) {
+        return "";
     }
 }

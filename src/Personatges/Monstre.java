@@ -9,15 +9,13 @@ package Personatges;
  *
  * @author lucas
  */
-public class Monstre {
-    private int vida;
-    private int atac;
-    private int defensa;
+public class Monstre extends Personatge {
+    private String nom;
     
-    public Monstre (int vida, int atac, int defensa) {
+    public Monstre (int vida, int atac, int defensa, String nom) {
         this.vida = vida;
         this.atac = atac;
         this.defensa = defensa;
+        this.nom = nom;           
     }
-    
 }

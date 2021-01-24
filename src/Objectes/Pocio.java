@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Habitacions;
+package Objectes;
 
 /**
  *
  * @author lucas
  */
-public class GeneradorMapes {
+abstract class Pocio {
+    private int intensitat;
+    private String nom;
     
-    public void crearMapa () {
-        
-    }
+    
 }

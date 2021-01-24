@@ -5,10 +5,21 @@
  */
 package Projecte;
 
+import Personatges.Jugador;
+import Habitacions.Mapa;
+
 /**
  *
  * @author lucas
  */
 public class Joc {
-    
+    private Jugador jugador;
+
+    public Joc(Jugador jugador) {
+        this.jugador = jugador;
+    }
+
+    public void jugar(Mapa mapa, boolean interactiu) {
+        
+    }
 }
