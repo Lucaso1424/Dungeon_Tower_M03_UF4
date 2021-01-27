@@ -5,6 +5,7 @@
  */
 package Projecte;
 
+import Habitacions.GeneradorMapes;
 import Habitacions.HabitacioPocio;
 import Personatges.Jugador;
 import Objectes.Pocio;
@@ -25,16 +26,21 @@ public class Main {
 
     public static void test1(boolean interactiu) {
         Scanner in = new Scanner (System.in);
+        
         System.out.println("--- Test 1 ---\n");
         System.out.println(" ____                             _____\n"
                 + "|    \\ _ _ ___ ___ ___ ___ ___   |_   _|___ _ _ _ ___ ___\n"
                 + "|  |  | | |   | . | -_| . |   |    | | | . | | | | -_|  _|\n"
                 + "|____/|___|_|_|_  |___|___|_|_|    |_| |___|_____|___|_|\n"
                 + "              |___|");
+        
         Joc j = new Joc(new Jugador(10, 1, 1, true));
+        
         Pocio pa = new PocioAtac("atac", 1);
         Pocio pd = new PocioDefensa("defensa", 1);
         
+        GeneradorMapes mapa = new GeneradorMapes();
+        System.out.println(mapa.crearMapa(""));
         
     }
 }

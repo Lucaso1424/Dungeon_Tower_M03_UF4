@@ -28,14 +28,13 @@ public class HabitacioPocio extends Habitacio {
     }
 
     @Override
-    public String entrar() {        
+    public String entrar() {
         String mensaje = "";
         mensaje = "Entres a l'habitació. Ummmm... Sembla que hi ha alguna cosa... una poció\n";
-        mensaje = "Et beus la poció incrementant el teu estat de "+pocio.getNom()+" en "+pocio.getIntensitat()+".\n";
+        mensaje = "Et beus la poció incrementant el teu estat de " + pocio.getNom() + " en " + pocio.getIntensitat() + ".\n";
         mensaje = "Prem [Enter] per entrar a la següent habitació.\n";
         return mensaje;
     }
-
 
     @Override
     public String sortir() {
