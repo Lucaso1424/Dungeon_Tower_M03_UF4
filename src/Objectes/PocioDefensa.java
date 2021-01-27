@@ -17,7 +17,7 @@ public class PocioDefensa extends Pocio {
         super(nom, intensitat);
     }
 
-    // @Override
+    @Override
     public String efecte(Jugador jugador) {
         jugador.setDefensa(jugador.getDefensa() + 1);
         return "La defensa del jugador s'ha sumat en 1";

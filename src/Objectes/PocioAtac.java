@@ -17,7 +17,7 @@ public class PocioAtac extends Pocio {
         super(nom, intensitat);
     }
 
-    //@Override
+    @Override
     public String efecte(Jugador jugador) {
         jugador.setAtac(jugador.getAtac() + 1);
         return "L'atac del jugador s'ha sumat en 1";

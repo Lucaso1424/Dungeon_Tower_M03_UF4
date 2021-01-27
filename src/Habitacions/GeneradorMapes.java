@@ -10,8 +10,16 @@ package Habitacions;
  * @author lucas
  */
 public class GeneradorMapes {
-    
-    public void crearMapa () {
+
+    public Mapa crearMapa(String creacionHabitacion) {
+        Mapa mapa = null;
+            
         
+        return null;
+        /*if (habitacion == "...") {
+            for (int i=0; i<; i++) {
+                
+            }
+        }*/
     }
 }
