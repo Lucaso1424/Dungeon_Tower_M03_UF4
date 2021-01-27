@@ -13,8 +13,6 @@ public class GeneradorMapes {
 
     public Mapa crearMapa(String creacionHabitacion) {
         Mapa mapa = null;
-            
-        
         return null;
         /*if (habitacion == "...") {
             for (int i=0; i<; i++) {

@@ -33,7 +33,25 @@ public class HabitacioBuida extends Habitacio {
 
     @Override
     public String toString(int linia) {
-        return null;
+        String habitacio = "";
+        switch (linia) {
+            case 0:
+                habitacio = "+-----+";
+                break;
+            case 1:
+                habitacio = "| J   |";
+                break;
+            case 2:
+                habitacio = "|     |";
+                break;
+            case 3:
+                habitacio = "|     |";
+                break;
+            case 4:
+                habitacio = "+-----+";
+                break;
+        }
+        return habitacio;
     }
 
 }
