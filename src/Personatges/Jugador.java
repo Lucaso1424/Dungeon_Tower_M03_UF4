@@ -11,7 +11,7 @@ package Personatges;
  */
 public class Jugador extends Personatge {
 
-    private int vida_maxima = 10;
+    public int vida_maxima = 10;
 
     public Jugador(int vida, int atac, int defensa, boolean esticViu) {
         super(10, 1, 1, true);

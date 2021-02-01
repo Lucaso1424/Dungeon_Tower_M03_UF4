@@ -38,12 +38,14 @@ public class Mapa {
             // LA POSICIO DE L'HABITACIO ES SUMA EN 1 PER PODER PASSAR A LA SEGUENT
             habitacioActual++;
             habitacions[habitacioActual].entrar();
-        } 
+        }
+        
         return moure;
     }
     
 //    @Override
     public String toString(int linia) {
+        // 
         String habitacioTxt = "";
         for (int i = 0; i < 5; i++) {
             for (int x = 0; x < habitacions.length; x++) {

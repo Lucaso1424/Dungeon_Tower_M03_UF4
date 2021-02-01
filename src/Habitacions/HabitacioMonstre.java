@@ -19,9 +19,19 @@ public class HabitacioMonstre extends Habitacio {
     public HabitacioMonstre(Monstre monstre) {
         this.monstre = monstre;
     }
+    
+    private String missatgeCombat (String i, Jugador jugador, Monstre monstre) {
+        String actiu = "";
+        actiu += i;
+        actiu += "---------------------\n\n";
+        return actiu;
+    }
 
     @Override
     public String activar(Jugador jugador) {
+        String actiu = "";
+        int i = 1;
+        actiu += missatgeCombat ("--Inici del combat--\n", jugador, monstre);
         return null;
     }
 
@@ -41,7 +51,25 @@ public class HabitacioMonstre extends Habitacio {
 
     @Override
     public String toString(int linia) {
-        return null;
+        String habitacio = "";
+        switch (linia) {
+            case 0:
+                habitacio = "+-----+";
+                break;
+            case 1:
+                habitacio = "| M   |";
+                break;
+            case 2:
+                habitacio = "|     |";
+                break;
+            case 3:
+                habitacio = "|     |";
+                break;
+            case 4:
+                habitacio = "+-----+";
+                break;
+        }
+        return habitacio;
     }
 
 }
