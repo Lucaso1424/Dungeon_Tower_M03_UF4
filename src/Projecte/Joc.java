@@ -13,6 +13,7 @@ import Habitacions.Mapa;
  * @author lucas
  */
 public class Joc {
+
     private Jugador jugador;
 
     public Joc(Jugador jugador) {
@@ -21,5 +22,10 @@ public class Joc {
 
     public void jugar(Mapa mapa, boolean interactiu) {
         
+        System.out.println(" ____                             _____\n"
+                + "|    \\ _ _ ___ ___ ___ ___ ___   |_   _|___ _ _ _ ___ ___\n"
+                + "|  |  | | |   | . | -_| . |   |    | | | . | | | | -_|  _|\n"
+                + "|____/|___|_|_|_  |___|___|_|_|    |_| |___|_____|___|_|\n"
+                + "              |___|");
     }
 }

@@ -11,9 +11,23 @@ package Personatges;
  */
 public class Monstre extends Personatge {
 
+    // DEFINIM INSTANCIA DEL NOM DEL MONSTRE DE LA CLASSE TIPUS MONSTRE
     private String nom;
-    
+
     public Monstre(int vida, int atac, int defensa, boolean esticViu) {
         super(vida, atac, defensa, esticViu);
     }
+
+    public TipusMonstre getNom() {
+        return TipusMonstre.valueOf(nom);
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
+    public void setNom (TipusMonstre nom) {
+        this.nom = nom.toString();
+    }
+
 }

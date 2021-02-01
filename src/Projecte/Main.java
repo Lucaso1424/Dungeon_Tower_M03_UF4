@@ -8,6 +8,7 @@ package Projecte;
 import Habitacions.GeneradorMapes;
 import Habitacions.HabitacioPocio;
 import Personatges.Jugador;
+import Objectes.PocioAtac;
 import Objectes.Pocio;
 import Objectes.PocioAtac;
 import Objectes.PocioDefensa;
