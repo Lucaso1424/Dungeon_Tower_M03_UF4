@@ -30,21 +30,6 @@ public class Mapa /*(Habitacio[] habitacions)*/ {
 
     public String toString(int linia) {
         String habitacioTxt = "";
-        for (int i = 0; i < 5; i++) {
-            for (int x = 0; x < habitacions.length; x++) {
-                habitacioTxt += habitacions[x].toString(i);
-                if (x != habitacions.length - 1) {
-                    if (x != habitacions.length - 1) {
-                        if (i == 2) {
-                            habitacioTxt += "-->";
-                        } else {
-                            habitacioTxt += "  ";
-                        }
-                    }
-                    habitacioTxt += "\n";
-                }
-            }
-        }
         return habitacioTxt;
     }
 }
