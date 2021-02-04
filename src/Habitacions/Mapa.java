@@ -45,23 +45,8 @@ public class Mapa {
     
 //    @Override
     public String toString(int linia) {
-        // 
+        // STRING DE HABITITACION PARA GENERAR EL MAPA CONCATENADO POR LAS FLECHAS -->
         String habitacioTxt = "";
-        for (int i = 0; i < 5; i++) {
-            for (int x = 0; x < habitacions.length; x++) {
-                habitacioTxt += habitacions[x].toString(i);
-                if (x != habitacions.length - 1) {
-                    if (x != habitacions.length - 1) {
-                        if (i == 2) {
-                            habitacioTxt += "-->";
-                        } else {
-                            habitacioTxt += "  ";
-                        }
-                    }
-                    habitacioTxt += "\n";
-                }
-            }
-        }
         return habitacioTxt;
     }
 }
