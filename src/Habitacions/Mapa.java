@@ -31,20 +31,11 @@ public class Mapa {
     
     // RETORNA TRUE O FALSE PER MOURE'S D'HABITACIO
     public boolean mou() {
-        boolean moure = (habitacioActual < habitacions.length -1);
-        
-        if (moure) {
-            habitacions[habitacioActual].sortir();
-            // LA POSICIO DE L'HABITACIO ES SUMA EN 1 PER PODER PASSAR A LA SEGUENT
-            habitacioActual++;
-            habitacions[habitacioActual].entrar();
-        }
-        
-        return moure;
+        return false;
     }
     
 //    @Override
-    public String toString(int linia) {
+    public String toString (int linia) {
         // STRING DE HABITITACION PARA GENERAR EL MAPA CONCATENADO POR LAS FLECHAS -->
         String habitacioTxt = "";
         return habitacioTxt;

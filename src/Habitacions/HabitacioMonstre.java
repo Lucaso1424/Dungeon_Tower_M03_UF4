@@ -19,20 +19,11 @@ public class HabitacioMonstre extends Habitacio {
     public HabitacioMonstre(Monstre monstre) {
         this.monstre = monstre;
     }
-    
-    private String missatgeCombat (String i, Jugador jugador, Monstre monstre) {
-        String actiu = "";
-        actiu += i;
-        actiu += "---------------------\n\n";
-        return actiu;
-    }
 
     @Override
     public String activar(Jugador jugador) {
-        String actiu = "";
-        int i = 1;
-        actiu += missatgeCombat ("--Inici del combat--\n", jugador, monstre);
-        return null;
+        String combat = "";
+        return combat;
     }
 
     @Override
