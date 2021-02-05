@@ -1,5 +1,4 @@
-# Dungeon_Tower_M03_UF4
-Projecte M03-UF4 → Dungeon Tower
+# Projecte M03-UF4 → Dungeon Tower
 1. Descripció general del problema
 
 Estem interessats en implementar una primera versió per un joc a mode de prova de concepte. La descripció general és la següent:
