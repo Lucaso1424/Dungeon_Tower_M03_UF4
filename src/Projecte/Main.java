@@ -37,9 +37,12 @@ public class Main {
         Pocio pa = new PocioAtac("atac", 1);
         Pocio pd = new PocioDefensa("defensa", 1);
         
+        // CREEM EL GENERADOR DE MAPES I EL GENERADOR DE MONSTRES
         GeneradorMapes mapa = new GeneradorMapes();
         GeneradorMonstres gm = new GeneradorMonstres();
-//        System.out.println(mapa.crearMapa(""));
+        System.out.println(mapa.crearMapa(""));
+        
+        // CREEM TAMBÉ L'HABITACIO DE MONSTRE AMB EL MONSTRE QUE ESCOLLIM
         HabitacioMonstre hm = new HabitacioMonstre(gm.crearMonstre("Bladetree"));
         System.out.println(hm.entrar());
         System.out.println(hm.activar(j));
