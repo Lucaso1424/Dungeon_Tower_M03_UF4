@@ -46,6 +46,7 @@ public class HabitacioMonstre extends Habitacio {
             if (monstre.getVida() < 1) {
                 combat += "Enhorabona has matat un " + monstre.getNom() + "!\n "
                         + "Prem [Enter] per entrar a la següent habitació.\n";
+                monstre.setEsticViu(false);
                 return combat;
             }
         }
