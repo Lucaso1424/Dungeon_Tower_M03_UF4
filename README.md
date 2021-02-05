@@ -21,4 +21,5 @@ Estem interessats en implementar una primera versió per un joc a mode de prova 
 
     Els diferents Mapes s’han de poder crear a partir de cadenes ja que la idea en un futur és crear-los a partir de fitxers de text.
 
+3. Diagrama de casos d'ús
 ![Screenshot](dungeonTower2.png)
