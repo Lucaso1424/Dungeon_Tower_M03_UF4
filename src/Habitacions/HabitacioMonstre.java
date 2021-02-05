@@ -23,21 +23,49 @@ public class HabitacioMonstre extends Habitacio {
     @Override
     public String activar(Jugador jugador) {
         String combat = "";
+        for (int i = 1; i < 4; i++) {
+            combat += "Assalt " + i + "    --->   Jugador: [V: " + jugador.getVida() + "(" + jugador.vida_maxima + "), A/D: " + jugador.getAtac() + "/" + jugador.getDefensa() + "]"
+                    + " vs " + monstre.getNom() + ": [V: " + monstre.getVida() + " A/D: " + monstre.getAtac() + "/" + monstre.getDefensa() + "]\n";
+
+            int vida_jugador = jugador.getVida() + jugador.getDefensa() - monstre.getAtac();
+            int vida_monstre = monstre.getVida() + monstre.getDefensa() - jugador.getAtac();
+            
+            jugador.setVida(vida_jugador);
+            monstre.setVida(vida_monstre);
+
+            combat += "Fi Assalt " + i + "    --->   Jugador: [V: " + jugador.getVida() + "(" + jugador.vida_maxima + "), A/D: " + jugador.getAtac() + "/" + jugador.getDefensa() + "]"
+                    + " vs " + monstre.getNom() + ": [V: " + monstre.getVida() + " A/D: " + monstre.getAtac() + "/" + monstre.getDefensa() + "]\n";
+
+            if (jugador.getVida() < 1) {
+                combat += "Has estat derrotat per un " + monstre.getNom() + " \n "
+                        + "HAS MORT!! El teu esperit vagarà per la torre eternament...\n";
+                jugador.setEsticViu(false);
+                return combat;
+            }
+
+            if (monstre.getVida() < 1) {
+                combat += "Enhorabona has matat un " + monstre.getNom() + "!\n "
+                        + "Prem [Enter] per entrar a la següent habitació.\n";
+                return combat;
+            }
+        }
+        combat += "Enhorabona has matat un " + monstre.getNom() + " per esgotament!!";
         return combat;
     }
 
     @Override
     public String entrar() {
         String mensaje = "";
-        mensaje = "Entres a l'habitació. Ummm... Sembla que no hi ha rés...\n";
+        mensaje = "Entres a l'habitació. O no!! Entre les ombres apareix un " + monstre.getNom() + "\n";
         mensaje = "Prem [Enter] per entrar a la següent habitació.\n";
         return mensaje;
     }
 
-
     @Override
     public String sortir() {
-        return null;
+        String mensaje = "";
+        mensaje = "Prem [Enter] per entrar a la següent habitació.\n";
+        return mensaje;
     }
 
     @Override

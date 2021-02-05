@@ -5,13 +5,9 @@
  */
 package Projecte;
 
-import Habitacions.GeneradorMapes;
-import Habitacions.HabitacioPocio;
-import Personatges.Jugador;
-import Objectes.PocioAtac;
-import Objectes.Pocio;
-import Objectes.PocioAtac;
-import Objectes.PocioDefensa;
+import Habitacions.*;
+import Personatges.*;
+import Objectes.*;
 import java.util.Scanner;
 
 /**
@@ -35,13 +31,17 @@ public class Main {
                 + "|____/|___|_|_|_  |___|___|_|_|    |_| |___|_____|___|_|\n"
                 + "              |___|");
         
-        Joc j = new Joc(new Jugador(10, 1, 1, true));
+        Jugador j = new Jugador(10, 1, 1, true);
+        
         
         Pocio pa = new PocioAtac("atac", 1);
         Pocio pd = new PocioDefensa("defensa", 1);
         
         GeneradorMapes mapa = new GeneradorMapes();
-        System.out.println(mapa.crearMapa(""));
-        
+        GeneradorMonstres gm = new GeneradorMonstres();
+//        System.out.println(mapa.crearMapa(""));
+        HabitacioMonstre hm = new HabitacioMonstre(gm.crearMonstre("Bladetree"));
+        System.out.println(hm.entrar());
+        System.out.println(hm.activar(j));
     }
 }
