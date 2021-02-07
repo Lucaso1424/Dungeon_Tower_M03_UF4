@@ -40,7 +40,7 @@ public class Main {
         // CREEM EL GENERADOR DE MAPES I EL GENERADOR DE MONSTRES
         GeneradorMapes GMP = new GeneradorMapes();
 //        GeneradorMonstres gm = new GeneradorMonstres();
-        Mapa habitacio = GMP.crearMapa("");
+        Mapa habitacio = GMP.crearMapa("........");
         System.out.println(habitacio);
         
         // CREEM TAMBÉ L'HABITACIO DE MONSTRE AMB EL MONSTRE QUE ESCOLLIM

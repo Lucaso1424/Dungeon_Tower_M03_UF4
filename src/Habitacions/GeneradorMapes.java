@@ -56,18 +56,20 @@ public class GeneradorMapes {
                 switch (y[1]) {
                     case "A":
                         // EN CADA CASE CREEM L'HABITACIO DE MONSTRE Y CREEM TAMBÉ EL MONSTRE AMB EL MÈTODES crearMonstre
-                        habitacio[i] = new HabitacioMonstre(gm);
-                        gm.crearMonstre("Ashcream");
+                        habitacio[i] = new HabitacioMonstre(gm.crearMonstre("Ashcream"));
                         break;
                     case "B":
-                        habitacio[i] = new HabitacioMonstre(gm);
-                        gm.crearMonstre("Bladetree");
+                        habitacio[i] = new HabitacioMonstre(gm.crearMonstre("Bladetree"));
                         break;
                     case "C":
-                        habitacio[i] = new HabitacioMonstre(gm);
-                        gm.crearMonstre("Cryptvine");
+                        habitacio[i] = new HabitacioMonstre(gm.crearMonstre("Cryptvine"));
+                        break;
                 }
             }
+            
+            esquerra = esquerra + 3;
+            dreta = dreta + 3;
+            
         }
         // COM NO PODEM FER EL RETURN DE habitacio, CREEM UN new MAPA PASSANT EL VALOR D'habitacio 
         Mapa mapa = new Mapa(habitacio);
