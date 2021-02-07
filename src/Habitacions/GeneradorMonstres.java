@@ -39,12 +39,12 @@ public class GeneradorMonstres extends Monstre {
     }
 
     // DEFINIM DOS MÈTODES PER A CREAR EL MONSTRE GENERANT EL NOM DEL MONSTRE I EL TIPUS DEL MONSTRE
-    public static Monstre crearMonstre(TipusMonstre tipus) {
-        Monstre monstre = new GeneradorMonstres();
-        monstre.setNom(tipus);
-        estatMonstres(monstre, tipus);
-        return monstre;
-    }
+//    public static Monstre crearMonstre(TipusMonstre tipus) {
+//        Monstre monstre = new GeneradorMonstres();
+//        monstre.setNom(tipus);
+//        estatMonstres(monstre, tipus);
+//        return monstre;
+//    }
 
     public static Monstre crearMonstre(String nom) {
         Monstre monstre = new GeneradorMonstres();

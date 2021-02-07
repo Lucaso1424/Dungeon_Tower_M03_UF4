@@ -5,6 +5,8 @@
  */
 package Habitacions;
 
+import Objectes.*;
+
 /**
  *
  * @author lucas
@@ -12,13 +14,63 @@ package Habitacions;
 public class GeneradorMapes {
 
     public Mapa crearMapa(String creacionHabitacion) {
-        Mapa mapa = null;
-        return null;
-        /*if (habitacion == "...") {
-            for (int i=0; i<; i++) {
-                
+
+        Habitacio[] habitacio;
+        int longitud = (creacionHabitacion.length() / 3);
+        habitacio = new Habitacio[longitud];
+
+        // DECLAREM ELS INT D'ESQUERRA I DRETA PER AGAFAR ELS TRES PRIMERS VALORS s
+        int esquerra = 0;
+        int dreta = 3;
+
+        for (int i = 0; i < longitud; i++) {
+            // UTILITZEM EL MÉTODE SUBSTRING PER DIVIDIR LA CADENA DE L'ESQUERRA I LA DRETA 
+            String x = creacionHabitacion.substring(esquerra, dreta);
+            // FEM UN .split PER SEPARAR AQUESTS DOS PER UN STRING DE ""
+            String[] y = x.split("");
+
+            // COMPROBEM AMB EL EQUALS DE QUE LA X ES IGUAL ALS "..." PER A L'HABITACIO
+            if (x.equals("...")) {
+                habitacio[i] = new HabitacioBuida();
             }
-        }*/
-        
+
+            // PASSEM LA VARIABLE num1 A parseInt DE L'ARRAY DE STRING DE y, QUE ES EL SPLIT DEL STRING ""
+            if (y[0].equals("P")) {
+                int num1 = Integer.parseInt(y[2]);
+                switch (y[1]) {
+                    case "A":
+                        // EN CADA CASE CREEM LA NOVA HABITACIO DE CADA POCIO
+                        Pocio PA = new PocioAtac("atac", num1);
+                        habitacio[i] = new HabitacioPocio(PA);
+                        break;
+                    case "D":
+                        Pocio PD = new PocioDefensa("defensa", num1);
+                        habitacio[i] = new HabitacioPocio(PD);
+                        break;
+                }
+            }
+            if (y[0].equals("M")) {
+                // CREEM EL GENERADOR DE MOSNTRES PER A CREAR CADA TIPUS DE EN L'HABITACIO
+                GeneradorMonstres gm = new GeneradorMonstres();
+                switch (y[1]) {
+                    case "A":
+                        // EN CADA CASE CREEM L'HABITACIO DE MONSTRE Y CREEM TAMBÉ EL MONSTRE AMB EL MÈTODES crearMonstre
+                        habitacio[i] = new HabitacioMonstre(gm);
+                        gm.crearMonstre("Ashcream");
+                        break;
+                    case "B":
+                        habitacio[i] = new HabitacioMonstre(gm);
+                        gm.crearMonstre("Bladetree");
+                        break;
+                    case "C":
+                        habitacio[i] = new HabitacioMonstre(gm);
+                        gm.crearMonstre("Cryptvine");
+                }
+            }
+        }
+        // COM NO PODEM FER EL RETURN DE habitacio, CREEM UN new MAPA PASSANT EL VALOR D'habitacio 
+        Mapa mapa = new Mapa(habitacio);
+        // FINALMENT, FEM EL RETURN D'habitacio PERO AGAFANT EL PARÀMETRE DE mapa
+        return mapa;
     }
 }

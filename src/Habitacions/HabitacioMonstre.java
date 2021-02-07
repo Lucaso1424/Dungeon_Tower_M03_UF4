@@ -29,14 +29,21 @@ public class HabitacioMonstre extends Habitacio {
 
             int vida_jugador = jugador.getVida() + jugador.getDefensa() - monstre.getAtac();
             int vida_monstre = monstre.getVida() + monstre.getDefensa() - jugador.getAtac();
-            
+
             jugador.setVida(vida_jugador);
             monstre.setVida(vida_monstre);
+
+            // PARA COGER VIDA ACTUAL
+            int j_vida = jugador.getVida();
+            if (j_vida > vida_jugador) {
+                vida_jugador = vida_jugador - monstre.getAtac();
+                jugador.setVida(vida_jugador);
+            }
 
             combat += "Fi Assalt " + i + "    --->   Jugador: [V: " + jugador.getVida() + "(" + jugador.vida_maxima + "), A/D: " + jugador.getAtac() + "/" + jugador.getDefensa() + "]"
                     + " vs " + monstre.getNom() + ": [V: " + monstre.getVida() + " A/D: " + monstre.getAtac() + "/" + monstre.getDefensa() + "]\n";
 
-            if (jugador.getVida() < 1) {
+            if (jugador.getVida() > 1) {
                 combat += "Has estat derrotat per un " + monstre.getNom() + " \n "
                         + "HAS MORT!! El teu esperit vagarà per la torre eternament...\n";
                 jugador.setEsticViu(false);

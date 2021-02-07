@@ -16,4 +16,5 @@ abstract class Habitacio {
     public abstract String entrar();
     public abstract String sortir();
     public abstract String toString(int linia);
+    public boolean moure;
 }

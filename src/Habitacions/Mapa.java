@@ -15,29 +15,60 @@ public class Mapa {
 
     Scanner in = new Scanner(System.in);
     Habitacio[] habitacions;
-    private int habitacioActual;
+    protected boolean moure = false;
 
     protected Mapa(Habitacio[] habitacions) {
         // RECOGEMOS VALORES CON EL THIS
         this.habitacions = habitacions;
-        habitacioActual = 0;
-        this.habitacions[0].entrar();
     }
 
     public Habitacio getHabitacioActual() {
-        // DEVUELVE LA HABITACION ACTUAL DE LAS HABITACIONES (0)
-        return habitacions[habitacioActual];
+        // DEVUELVE LA HABITACION ACTUAL DE LAS HABITACIONES MEDIANTE EL AUXILIAR
+        Habitacio habitacioActual;
+        int aux = 0;
+        
+        for (int i = 0; i < habitacions.length; i++) {
+            if (habitacions[i].moure) {
+                aux = i;
+            }
+        }
+        
+        return habitacioActual = habitacions[aux];
     }
-    
-    // RETORNA TRUE O FALSE PER MOURE'S D'HABITACIO
+
+    // RETORNA TRUE O FALSE PER MOURE'S D'HABITACIO SI L'ARRAY DE habitacions.length
+    // ES MÉS PETIT QUE SIGUI true, SI ES MÉS GRAN QUE EL NOMBRE D'HABITACIONS false
     public boolean mou() {
-        return false;
+        boolean moureHabitacions = false;
+        for (int i = 0; i < habitacions.length; i++) {
+            if (i < habitacions.length) {
+                moureHabitacions = true;
+            } else {
+                moureHabitacions = false;
+            }
+        }
+        return moureHabitacions;
     }
-    
+
 //    @Override
-    public String toString (int linia) {
-        // STRING DE HABITITACION PARA GENERAR EL MAPA CONCATENADO POR LAS FLECHAS -->
+    public String toString(int linia) {
         String habitacioTxt = "";
+        for (int i = 0; i < 5; i++) {
+            for (int x = 0; x < habitacions.length; x++) {
+                habitacioTxt += habitacions[x].toString(i);
+                if (x != habitacions.length - 1) {
+                    if (x != habitacions.length - 1) {
+                        if (i == 2) {
+                            habitacioTxt += "-->";
+                        } else {
+                            habitacioTxt += "  ";
+                        }
+                    }
+                    habitacioTxt += "\n";
+                }
+            }
+        }
         return habitacioTxt;
     }
+
 }
