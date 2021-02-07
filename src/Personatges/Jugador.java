@@ -15,7 +15,7 @@ public class Jugador extends Personatge {
 
     public Jugador() {
         super();
-        this.vida = vida_maxima;
+        vida = 10;
         atac = 1;
         defensa = 1;
     }

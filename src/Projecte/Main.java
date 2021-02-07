@@ -17,17 +17,61 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        test2(true);
-//        Jugador j = new Jugador();
-//        GeneradorMapes GMP = new GeneradorMapes();
-//        GeneradorMonstres gm = new GeneradorMonstres();
-//        Mapa habitacio = GMP.crearMapa("...MA.PA1...");
-//        System.out.println(habitacio);
+//        test1(true);
+//        test2(true);
+//        test3(true);
+//        test4(true);
+//        test5(true);
+//        test6(true);
+//        test7(true);
+        test8(true);
     }
-    
+
+    public static void test1(boolean interactiu) {
+        System.out.println("--- Test 1 ---");  
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("........."), interactiu);
+    }
+
     public static void test2(boolean interactiu) {
         System.out.println("--- Test 2 ---");
         Joc j = new Joc(new Jugador());
         j.jugar(GeneradorMapes.crearMapa("...MA.MA."), interactiu);
+    }
+
+    public static void test3(boolean interactiu) {
+        System.out.println("--- Test3 ---");
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("...MB.MA."), interactiu);
+    }
+
+    public static void test4(boolean interactiu) {
+        System.out.println("--- Test 4 ---");
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("MC."), interactiu);
+    }
+
+    public static void test5(boolean interactiu) {
+        System.out.println("--- Test 5 ---");
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("MB.MB.MB...."), interactiu);
+    }
+
+    public static void test6(boolean interactiu) {
+        System.out.println("--- Test 6 ---");
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("PA2MC."), interactiu);
+    }
+
+    public static void test7(boolean interactiu) {
+        System.out.println("--- Test 7 ---");
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("PD1MB.MB.MB...."), interactiu);
+    }
+
+    public static void test8(boolean interactiu) {
+        System.out.println("--- Test 8 ---");
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("...PD1MA....PA1MB.PA1MC...."), interactiu);
     }
 }

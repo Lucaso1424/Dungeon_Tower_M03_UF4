@@ -12,10 +12,18 @@ import Personatges.Jugador;
  * @author lucas
  */
 public abstract class Habitacio {
-    boolean moure;
+    public boolean moure;
+    public boolean posicioJugador = false;
     public abstract String activar(Jugador jugador);
     public abstract String entrar();
     public abstract String sortir();
     public abstract String toString(int linia);
 
+    public boolean isPosicioJugador() {
+        return posicioJugador;
+    }
+
+    public void setPosicioJugador(boolean posicioJugador) {
+        this.posicioJugador = posicioJugador;
+    }
 }

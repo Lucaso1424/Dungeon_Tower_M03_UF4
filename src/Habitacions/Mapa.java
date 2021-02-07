@@ -15,7 +15,8 @@ public class Mapa {
 
     Scanner in = new Scanner(System.in);
     final Habitacio[] habitacions;
-    protected boolean moure = false;
+    private int habitacioActual;
+    private boolean moureHabitacions;
 
     protected Mapa(Habitacio[] habitacions) {
         // RECOGEMOS VALORES CON EL THIS
@@ -23,30 +24,20 @@ public class Mapa {
     }
 
     public Habitacio getHabitacioActual() {
-        // DEVUELVE LA HABITACION ACTUAL DE LAS HABITACIONES MEDIANTE EL AUXILIAR
-        Habitacio habitacioActual;
-        int aux = 0;
-
-        for (int i = 0; i < habitacions.length; i++) {
-            if (habitacions[i].moure) {
-                aux = i;
-            }
-        }
-
-        habitacioActual = habitacions[aux];
-        return habitacioActual;
+        // RETORNA EL ARRATY D'HABITACIONS I L'HABITACIO ACTUAL
+        return habitacions[habitacioActual];
     }
 
     // RETORNA TRUE O FALSE PER MOURE'S D'HABITACIO SI L'ARRAY DE habitacions.length
     // ES MÉS PETIT QUE SIGUI true, SI ES MÉS GRAN QUE EL NOMBRE D'HABITACIONS false
     public boolean mou() {
-        boolean moureHabitacions = false;
-        for (int i = 0; i < habitacions.length; i++) {
-            if (i < habitacions.length) {
-                moureHabitacions = true;
-            } else {
-                moureHabitacions = false;
-            }
+        moureHabitacions = (habitacioActual < habitacions.length - 1);
+
+        if (moureHabitacions == true) {
+            habitacions[habitacioActual].sortir();
+            // ES SUMA L'HABITACIO ACTUAL PER PODER MOURE
+            habitacioActual++;
+            habitacions[habitacioActual].entrar();
         }
         return moureHabitacions;
     }

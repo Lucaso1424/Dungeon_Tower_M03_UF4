@@ -31,8 +31,7 @@ public class HabitacioPocio extends Habitacio {
     public String entrar() {
         String mensaje = "";
         mensaje = "Entres a l'habitació. Ummmm... Sembla que hi ha alguna cosa... una poció\n";
-        mensaje = "Et beus la poció incrementant el teu estat de " + pocio.getNom() + " en " + pocio.getIntensitat() + ".\n";
-        mensaje = "Prem [Enter] per entrar a la següent habitació.\n";
+        mensaje += "Et beus la poció incrementant el teu estat de " + pocio.getNom() + " en " + pocio.getIntensitat() + ".\n";
         return mensaje;
     }
 
@@ -49,10 +48,14 @@ public class HabitacioPocio extends Habitacio {
                 habitacio = "+-----+";
                 break;
             case 1:
-                habitacio = "|     |";
+                habitacio = "| P   |";
                 break;
             case 2:
-                habitacio = "|  P  |";
+                if (posicioJugador == true) {
+                    habitacio = "|  J  |";
+                } else {
+                    habitacio = "|     |";
+                }
                 break;
             case 3:
                 habitacio = "|     |";

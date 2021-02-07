@@ -43,16 +43,14 @@ public class HabitacioMonstre extends Habitacio {
             combat += "Fi Assalt " + i + "    --->   Jugador: [V: " + jugador.getVida() + "(" + jugador.vida_maxima + "), A/D: " + jugador.getAtac() + "/" + jugador.getDefensa() + "]"
                     + " vs " + monstre.getNom() + ": [V: " + monstre.getVida() + " A/D: " + monstre.getAtac() + "/" + monstre.getDefensa() + "]\n";
 
-            if (jugador.getVida() > 1) {
-                combat += "Has estat derrotat per un " + monstre.getNom() + " \n "
-                        + "HAS MORT!! El teu esperit vagarà per la torre eternament...\n";
+            if (jugador.getVida() < 1) {
+                combat += "Has estat derrotat per un " + monstre.getNom() + " \n ";
                 jugador.setEsticViu(false);
                 return combat;
             }
 
             if (monstre.getVida() < 1) {
-                combat += "Enhorabona has matat un " + monstre.getNom() + "!\n "
-                        + "Prem [Enter] per entrar a la següent habitació.\n";
+                combat += "Enhorabona has matat un " + monstre.getNom() + "!\n ";
                 monstre.setEsticViu(false);
                 return combat;
             }
@@ -65,15 +63,12 @@ public class HabitacioMonstre extends Habitacio {
     public String entrar() {
         String mensaje = "";
         mensaje = "Entres a l'habitació. O no!! Entre les ombres apareix un " + monstre.getNom() + "\n";
-        mensaje = "Prem [Enter] per entrar a la següent habitació.\n";
         return mensaje;
     }
 
     @Override
     public String sortir() {
-        String mensaje = "";
-        mensaje = "Prem [Enter] per entrar a la següent habitació.\n";
-        return mensaje;
+        return null;
     }
 
     @Override
@@ -84,10 +79,14 @@ public class HabitacioMonstre extends Habitacio {
                 habitacio = "+-----+";
                 break;
             case 1:
-                habitacio = "|     |";
+                habitacio = "| M   |";
                 break;
             case 2:
-                habitacio = "|  M  |";
+                if (posicioJugador == true) {
+                    habitacio = "|  J  |";
+                    } else {
+                    habitacio = "|     |";
+                }
                 break;
             case 3:
                 habitacio = "|     |";

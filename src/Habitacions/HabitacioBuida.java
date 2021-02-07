@@ -12,17 +12,18 @@ import Personatges.Jugador;
  * @author lucas
  */
 public class HabitacioBuida extends Habitacio {
-
+    
+    private Jugador jugador;
+    
     @Override
     public String activar(Jugador jugador) {
-        return null;
+        return "Entres a l'habitacio. No hi ha res, esta buida.";
     }
 
     @Override
     public String entrar() {
         String mensaje = "";
         mensaje = "Entres a l'habitació. Ummm... Sembla que no hi ha rés...\n";
-        mensaje = "Prem [Enter] per entrar a la següent habitació.\n";
         return mensaje;
     }
 
@@ -42,7 +43,11 @@ public class HabitacioBuida extends Habitacio {
                 habitacio = "|     |";
                 break;
             case 2:
-                habitacio = "|  J  |";
+                if (posicioJugador == true) {
+                    habitacio = "|  J  |";
+                    } else {
+                    habitacio = "|     |";
+                }
                 break;
             case 3:
                 habitacio = "|     |";
