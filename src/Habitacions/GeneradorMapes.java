@@ -29,12 +29,13 @@ public class GeneradorMapes {
             // FEM UN .split PER SEPARAR AQUESTS DOS PER UN STRING DE ""
             String[] y = x.split("");
 
-            // COMPROBEM AMB EL EQUALS DE QUE LA X ES IGUAL ALS "..." PER A L'HABITACIO
+            // COMPROBEM AMB EL EQUALS DE QUE LA X ES IGUAL ALS "..." PER A L'HABITACIO BUIDA
             if (x.equals("...")) {
                 habitacio[i] = new HabitacioBuida();
             }
 
             // PASSEM LA VARIABLE num1 A parseInt DE L'ARRAY DE STRING DE y, QUE ES EL SPLIT DEL STRING ""
+            // RELITZEM EL MATEIX 
             if (y[0].equals("P")) {
                 int num1 = Integer.parseInt(y[2]);
                 switch (y[1]) {

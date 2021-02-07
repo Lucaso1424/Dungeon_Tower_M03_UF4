@@ -31,20 +31,22 @@ public class Main {
                 + "|____/|___|_|_|_  |___|___|_|_|    |_| |___|_____|___|_|\n"
                 + "              |___|");
         
-        Jugador j = new Jugador(10, 1, 1, true);
+//        Jugador j = new Jugador(10, 1, 1, true);
         
         
-        Pocio pa = new PocioAtac("atac", 1);
-        Pocio pd = new PocioDefensa("defensa", 1);
+//        Pocio pa = new PocioAtac("atac", 1);
+//        Pocio pd = new PocioDefensa("defensa", 1);
         
         // CREEM EL GENERADOR DE MAPES I EL GENERADOR DE MONSTRES
-        GeneradorMapes mapa = new GeneradorMapes();
-        GeneradorMonstres gm = new GeneradorMonstres();
-        System.out.println(mapa.crearMapa(""));
+        GeneradorMapes GMP = new GeneradorMapes();
+//        GeneradorMonstres gm = new GeneradorMonstres();
+        Mapa habitacio = GMP.crearMapa("");
+        System.out.println(habitacio);
         
         // CREEM TAMBÉ L'HABITACIO DE MONSTRE AMB EL MONSTRE QUE ESCOLLIM
-        HabitacioMonstre hm = new HabitacioMonstre(gm.crearMonstre("Bladetree"));
-        System.out.println(hm.entrar());
-        System.out.println(hm.activar(j));
+//        HabitacioMonstre hm = new HabitacioMonstre(gm.crearMonstre("Bladetree"));
+//        System.out.println(hm.entrar());
+//        System.out.println(hm.activar(j));
+        
     }
 }

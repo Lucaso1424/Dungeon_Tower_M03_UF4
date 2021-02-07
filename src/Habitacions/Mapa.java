@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Mapa {
 
     Scanner in = new Scanner(System.in);
-    Habitacio[] habitacions;
+    final Habitacio[] habitacions;
     protected boolean moure = false;
 
     protected Mapa(Habitacio[] habitacions) {
@@ -26,14 +26,15 @@ public class Mapa {
         // DEVUELVE LA HABITACION ACTUAL DE LAS HABITACIONES MEDIANTE EL AUXILIAR
         Habitacio habitacioActual;
         int aux = 0;
-        
+
         for (int i = 0; i < habitacions.length; i++) {
             if (habitacions[i].moure) {
                 aux = i;
             }
         }
-        
-        return habitacioActual = habitacions[aux];
+
+        habitacioActual = habitacions[aux];
+        return habitacioActual;
     }
 
     // RETORNA TRUE O FALSE PER MOURE'S D'HABITACIO SI L'ARRAY DE habitacions.length
@@ -50,7 +51,6 @@ public class Mapa {
         return moureHabitacions;
     }
 
-//    @Override
     public String toString(int linia) {
         String habitacioTxt = "";
         for (int i = 0; i < 5; i++) {
