@@ -13,11 +13,9 @@ import Objectes.*;
  */
 public class GeneradorMapes {
 
-    public Mapa crearMapa(String creacionHabitacion) {
-
-        Habitacio[] habitacio;
+    public static Mapa crearMapa(String creacionHabitacion) {
         int longitud = (creacionHabitacion.length() / 3);
-        habitacio = new Habitacio[longitud];
+        Habitacio[] habitacio = new Habitacio[longitud];
 
         // DECLAREM ELS INT D'ESQUERRA I DRETA PER AGAFAR ELS TRES PRIMERS VALORS s
         int esquerra = 0;
@@ -37,15 +35,14 @@ public class GeneradorMapes {
             // PASSEM LA VARIABLE num1 A parseInt DE L'ARRAY DE STRING DE y, QUE ES EL SPLIT DEL STRING ""
             // RELITZEM EL MATEIX 
             if (y[0].equals("P")) {
-                int num1 = Integer.parseInt(y[2]);
                 switch (y[1]) {
                     case "A":
                         // EN CADA CASE CREEM LA NOVA HABITACIO DE CADA POCIO
-                        Pocio PA = new PocioAtac("atac", num1);
+                        Pocio PA = new PocioAtac("atac", Integer.parseInt(y[2]));
                         habitacio[i] = new HabitacioPocio(PA);
                         break;
                     case "D":
-                        Pocio PD = new PocioDefensa("defensa", num1);
+                        Pocio PD = new PocioDefensa("defensa", Integer.parseInt(y[2]));
                         habitacio[i] = new HabitacioPocio(PD);
                         break;
                 }

@@ -11,10 +11,12 @@ package Personatges;
  */
 public class Jugador extends Personatge {
 
-    public int vida_maxima = 10;
+    public final int vida_maxima = 10;
 
-    public Jugador(int vida, int atac, int defensa, boolean esticViu) {
-        super(10, 1, 1, true);
-        this.vida_maxima = vida_maxima;
+    public Jugador() {
+        super();
+        this.vida = vida_maxima;
+        atac = 1;
+        defensa = 1;
     }
 }

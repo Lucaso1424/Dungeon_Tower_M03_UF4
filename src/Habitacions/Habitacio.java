@@ -11,7 +11,7 @@ import Personatges.Jugador;
  *
  * @author lucas
  */
-abstract class Habitacio {
+public abstract class Habitacio {
     boolean moure;
     public abstract String activar(Jugador jugador);
     public abstract String entrar();

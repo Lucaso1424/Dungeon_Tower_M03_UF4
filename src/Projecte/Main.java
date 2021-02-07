@@ -14,39 +14,20 @@ import java.util.Scanner;
  *
  * @author lucas
  */
-
 public class Main {
 
     public static void main(String[] args) {
-        test1(false);
-    }
-
-    public static void test1(boolean interactiu) {
-        Scanner in = new Scanner (System.in);
-        
-        System.out.println("--- Test 1 ---\n");
-        System.out.println(" ____                             _____\n"
-                + "|    \\ _ _ ___ ___ ___ ___ ___   |_   _|___ _ _ _ ___ ___\n"
-                + "|  |  | | |   | . | -_| . |   |    | | | . | | | | -_|  _|\n"
-                + "|____/|___|_|_|_  |___|___|_|_|    |_| |___|_____|___|_|\n"
-                + "              |___|");
-        
-//        Jugador j = new Jugador(10, 1, 1, true);
-        
-        
-//        Pocio pa = new PocioAtac("atac", 1);
-//        Pocio pd = new PocioDefensa("defensa", 1);
-        
-        // CREEM EL GENERADOR DE MAPES I EL GENERADOR DE MONSTRES
-        GeneradorMapes GMP = new GeneradorMapes();
+        test2(true);
+//        Jugador j = new Jugador();
+//        GeneradorMapes GMP = new GeneradorMapes();
 //        GeneradorMonstres gm = new GeneradorMonstres();
-        Mapa habitacio = GMP.crearMapa("........");
-        System.out.println(habitacio);
-        
-        // CREEM TAMBÉ L'HABITACIO DE MONSTRE AMB EL MONSTRE QUE ESCOLLIM
-//        HabitacioMonstre hm = new HabitacioMonstre(gm.crearMonstre("Bladetree"));
-//        System.out.println(hm.entrar());
-//        System.out.println(hm.activar(j));
-        
+//        Mapa habitacio = GMP.crearMapa("...MA.PA1...");
+//        System.out.println(habitacio);
+    }
+    
+    public static void test2(boolean interactiu) {
+        System.out.println("--- Test 2 ---");
+        Joc j = new Joc(new Jugador());
+        j.jugar(GeneradorMapes.crearMapa("...MA.MA."), interactiu);
     }
 }

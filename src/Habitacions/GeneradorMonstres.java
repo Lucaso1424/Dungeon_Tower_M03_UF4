@@ -15,7 +15,7 @@ import Personatges.Monstre;
 public class GeneradorMonstres extends Monstre {
 
     public GeneradorMonstres() {
-        super(0, 0, 0, true);
+        super();
     }
 
     public static void estatMonstres(Monstre monstre, TipusMonstre tipus) {
@@ -37,14 +37,6 @@ public class GeneradorMonstres extends Monstre {
                 break;
         }
     }
-
-    // DEFINIM DOS MÈTODES PER A CREAR EL MONSTRE GENERANT EL NOM DEL MONSTRE I EL TIPUS DEL MONSTRE
-//    public static Monstre crearMonstre(TipusMonstre tipus) {
-//        Monstre monstre = new GeneradorMonstres();
-//        monstre.setNom(tipus);
-//        estatMonstres(monstre, tipus);
-//        return monstre;
-//    }
 
     public static Monstre crearMonstre(String nom) {
         Monstre monstre = new GeneradorMonstres();

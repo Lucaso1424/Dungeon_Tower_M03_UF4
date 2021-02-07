@@ -14,8 +14,8 @@ public class Monstre extends Personatge {
     // DEFINIM INSTANCIA DEL NOM DEL MONSTRE DE LA CLASSE TIPUS MONSTRE
     private String nom;
 
-    public Monstre(int vida, int atac, int defensa, boolean esticViu) {
-        super(vida, atac, defensa, esticViu);
+    public Monstre() {
+        super();
     }
 
     public TipusMonstre getNom() {

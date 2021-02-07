@@ -9,18 +9,18 @@ package Personatges;
  *
  * @author lucas
  */
-
 public abstract class Personatge {
-    private int vida;
-    private int atac;
-    private int defensa;
-    private boolean esticViu;
 
-    public Personatge (int vida, int atac, int defensa, boolean esticViu) {
-        this.vida = vida;
-        this.defensa = defensa;
-        this.atac = atac;
-        this.esticViu = esticViu;
+    protected int vida;
+    protected int atac;
+    protected int defensa;
+    protected boolean esticViu;
+
+    protected Personatge() {
+        this.vida = 1;
+        this.atac = 0;
+        this.defensa = 0;
+        this.esticViu = true;
     }
 
     public int getVida() {
@@ -54,5 +54,5 @@ public abstract class Personatge {
     public void setEsticViu(boolean esticViu) {
         this.esticViu = esticViu;
     }
-    
+
 }

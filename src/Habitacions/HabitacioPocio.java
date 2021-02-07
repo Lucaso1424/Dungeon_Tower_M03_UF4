@@ -49,10 +49,10 @@ public class HabitacioPocio extends Habitacio {
                 habitacio = "+-----+";
                 break;
             case 1:
-                habitacio = "| P   |";
+                habitacio = "|     |";
                 break;
             case 2:
-                habitacio = "|     |";
+                habitacio = "|  P  |";
                 break;
             case 3:
                 habitacio = "|     |";

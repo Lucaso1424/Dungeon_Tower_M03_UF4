@@ -84,10 +84,10 @@ public class HabitacioMonstre extends Habitacio {
                 habitacio = "+-----+";
                 break;
             case 1:
-                habitacio = "| M   |";
+                habitacio = "|     |";
                 break;
             case 2:
-                habitacio = "|     |";
+                habitacio = "|  M  |";
                 break;
             case 3:
                 habitacio = "|     |";
