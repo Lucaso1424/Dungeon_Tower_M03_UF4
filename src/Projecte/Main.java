@@ -17,14 +17,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        test1(false);
-        test2(false);
-        test3(false);
-        test4(false);
-        test5(false);
-        test6(false);
-        test7(false);
-        test8(false);
+//        test1(true);
+//        test2(true);
+//        test3(true);
+//        test4(true);
+//        test5(true);
+//        test6(true);
+//        test7(true);
+        test8(true);
     }
 
     public static void test1(boolean interactiu) {

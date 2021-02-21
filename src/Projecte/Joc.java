@@ -30,6 +30,7 @@ public class Joc {
                 + "|____/|___|_|_|_  |___|___|_|_|    |_| |___|_____|___|_|\n"
                 + "              |___|");
         System.out.println("Arriba al final de la torre sense morir en l'intent.");
+        
         do {
             habitacioActual = mapa.getHabitacioActual();
             // HO DEFINIM EN TRUE PER A QUE PRINTI LA J DEL JUGADOR
